@@ -26,7 +26,6 @@ listen(Ssl, Port, Opts, SslOpts) ->
 accept({ssl, ListenSocket}) ->
     % There's a bug in ssl:transport_accept/2 at the moment, which is the
     % reason for the try...catch block. Should be fixed in OTP R14.
-    try ssl:transport_accept(ListenSocket) of
     try ssl:transport_accept(ListenSocket, ?ACCEPT_TIMEOUT) of
         {ok, Socket} ->
            {ok, {ssl, Socket}};
