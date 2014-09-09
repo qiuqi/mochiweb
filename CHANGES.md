@@ -1,5 +1,33 @@
-Version 2.7.0 released XXXX-XX-XX
+Version 2.9.0 released 2014-06-24
 
+* Increased timeout in test suite for FreeBSD
+  https://github.com/mochi/mochiweb/pull/121
+* Updated rebar to v2.5.0 and fixed associated build issues
+  https://github.com/mochi/mochiweb/issues/131
+
+Version 2.8.0 released 2014-01-01
+
+* Websocket support
+  https://github.com/mochi/mochiweb/pull/120
+* Force files named "crossdomain.xml" to have MIME type
+  text/x-cross-domain-policy.
+  https://github.com/mochi/mochiweb/pull/118
+
+Version 2.7.0 released 2013-08-01
+
+* Fix 0-length range responses
+  https://github.com/mochi/mochiweb/pull/87
+* Add support for all possible `erlang:decode_packet/3` responses,
+  previously these would just crash.
+  https://github.com/mochi/mochiweb/pull/114
+* Makefile fixed to make `make test` work before `make all`
+  https://github.com/mochi/mochiweb/pull/116
+* Usage of the crypto module made R16B01+ compatible
+  https://github.com/mochi/mochiweb/pull/115
+* Build fixed for R16B01
+  https://github.com/mochi/mochiweb/pull/112
+* `mochiweb_socket_server:stop/1` is now a synchronous
+  call instead of an asynchronous cast
 * `mochiweb_html:parse_tokens/1` (and `parse/1`) will now create a
   html element to wrap documents that have a HTML5 doctype
   (`<!doctype html>`) but no html element 
